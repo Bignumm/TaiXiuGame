@@ -22,21 +22,21 @@ def dice():
     wb = load_workbook('Data.xlsx')
     ws = wb.active
     
-    if ws['H1'].value == 1:
+    if int(ws['H1'].value) == 1:
         a = random.randint(1, 4)
         b = random.randint(1, 3)
         c = random.randint(1, 3)
         res = a + b + c
         return res, a, b, c
     
-    if ws['H1'].value == 6:
+    if int(ws['H1'].value) == 6:
         a = random.randint(4, 6)
         b = random.randint(3, 6)
         c = random.randint(4, 6)
         res = a + b + c
         return res, a, b, c
 
-    if ws['H1'].value == 0:
+    if int(ws['H1'].value) == 0:
         a = random.randint(1, 6)
         b = random.randint(1, 6)
         c = random.randint(1, 6)
